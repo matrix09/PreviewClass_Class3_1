@@ -25,7 +25,5 @@ public class Follow : MonoBehaviour {
 
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(dir), 10 * Time.deltaTime);
 
-
-
 	}
 }
