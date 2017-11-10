@@ -31,21 +31,16 @@ public class Controller : MonoBehaviour {
 
         Vector3 mov = ve * forward + he * right;
 
-        //speed = 0f;
-
+        speed = 0f;
         if (mov != Vector3.zero)
         {
             transform.forward = mov;
-            //transform.forward = Vector3.Lerp(transform.forward, mov, 5 * Time.deltaTime);
             transform.Translate(Vector3.forward * 5f * Time.deltaTime, Space.Self);
-
-           // transform.Translate(transform.forward * 5f * Time.deltaTime, Space.World);
-            //speed = 1f;
+           speed = 1f;
         }
-
-        //am.SetFloat("Speed", speed);
+        if(null != am)
+        am.SetFloat("Speed", speed);
     }
-
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Box"))

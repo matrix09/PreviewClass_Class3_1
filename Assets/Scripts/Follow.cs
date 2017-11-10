@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour {
 
-
     public float fmoveSpeed;
 
     public Vector3 OffSet;
@@ -12,7 +11,6 @@ public class Follow : MonoBehaviour {
     public Vector3 Dir;
 
     public Transform player;
-
 	
 	// Update is called once per frame
 	void Update () {
